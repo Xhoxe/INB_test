@@ -1,0 +1,33 @@
+//Mobile-first
+@mixin lg-d {
+  @media (min-width: (map-get($breakpoints, lg))) {
+    @content;
+  }
+}
+
+@mixin md-d {
+  @media (max-width: (map-get($breakpoints, lg) - 0.2px)) and (min-width: (map-get($breakpoints, md))) {
+    @content;
+  }
+}
+
+@mixin sm-d {
+  @media (max-width: (map-get($breakpoints, md) - 0.2px)) and (min-width: (map-get($breakpoints, sm))) {
+    @content;
+  }
+}
+@mixin sm-l {
+  @media (max-width: (map-get($breakpoints, sm) - 0.2px)) and (min-width: (map-get($breakpoints, clarification-1))) {
+    @content;
+  }
+}
+@mixin clarification-1 {
+  @media (max-width: (map-get($breakpoints, clarification-1) - 0.2px)) and (min-width: (map-get($breakpoints, sml))) {
+    @content;
+  }
+}
+@mixin sm-ll {
+  @media (max-width: (map-get($breakpoints, sml) - 0.2px)) {
+    @content;
+  }
+}

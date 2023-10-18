@@ -1,0 +1,1630 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Marcellus&family=Poppins:wght@100;200;300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Marcellus&family=Mulish:wght@200&family=Poppins:wght@100;200;300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Marcellus&family=Mulish&family=Poppins:wght@100;200;300&display=swap");
+:root {
+  --black-color: #000000;
+  --black-2-color: #010101;
+  --secondary-border-color: linear-gradient(
+    132.88deg,
+    #326cff 3.44%,
+    #26fff2 100%
+  );
+  --white-color: #ffffff;
+  --primary-border-color: linear-gradient(
+    316.53deg,
+    #26fff2 13.2%,
+    #326cff 71.54%
+  );
+  --primary-shadow: 0px 4px 50px 0px #326cff80;
+  --secondary-shadow: 0px 4px 4px 0px #00000040;
+  --list_movies-hover-shadow: 0px 0px 20px 0px #2cb0f980;
+  --hero-section-shadow: 100px 0px 100px 0px #000000;
+  --more-information-text-color: #323232;
+  --gray-main-text-color: #c2c2c2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: var(--black-color);
+  box-shadow: var(--secondary-shadow);
+  width: 100%;
+  height: 8vh;
+}
+.header .container_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.header .container_header .logo_box {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 20%;
+  height: 100%;
+}
+.header .container_header .logo_box .left_header_text {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--white-color);
+  font-family: "Poppins", sans-serif;
+}
+.header .container_header .logo_box .logo {
+  display: inline-flex;
+  width: 45%;
+  height: 50%;
+  padding: 2px;
+  background: var(--secondary-border-color);
+  border-radius: 14%;
+  border: 2px solid;
+}
+.header .container_header .logo_box .logo .logo-inner {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--black-color);
+  border-radius: 10%;
+  width: 100%;
+  height: 100%;
+}
+.header .container_header .logo_box .logo .logo-inner-text {
+  font-family: "LemonRegular", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--white-color);
+}
+.header .container_header .menu_header_box {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.header .container_header .menu_header_box .menu_button_header {
+  position: relative;
+  color: var(--white-color);
+  text-decoration: none;
+  font-size: 8px;
+  opacity: 50%;
+  cursor: pointer;
+  font-family: "Mulish", sans-serif;
+  font-weight: 800px;
+}
+.header .container_header .menu_header_box .menu_button_header:hover {
+  opacity: 1;
+}
+.header .container_header .menu_header_box .menu_button_header:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  height: 1px;
+  background: var(--secondary-border-color);
+}
+.header .container_header .right_icons_header {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.header .container_header .right_icons_header .search_header {
+  width: 10px;
+  height: 10px;
+}
+.header .container_header .right_icons_header .bell_header {
+  width: 10px;
+  height: 10px;
+}
+.header .container_header .right_icons_header .profile_header {
+  width: 10px;
+  height: 10px;
+}
+
+.section_movie_info {
+  width: 100%;
+  height: 25vh;
+  display: flex;
+}
+.section_movie_info .movie_text_actions {
+  width: 43%;
+  height: 100%;
+  background-color: var(--black-2-color);
+  box-shadow: var(--hero-section-shadow);
+}
+.section_movie_info .movie_visuals {
+  width: 57%;
+  height: 100%;
+  background-color: var(--black-2-color);
+}
+.section_movie_info .movie_visuals .hero_image {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, var(--black-2-color), transparent 15%), url("/images/heroes.png");
+  background-size: 100% 100%;
+}
+.section_movie_info .movie_text_actions {
+  width: 43%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white-color);
+}
+.section_movie_info .movie_text_actions .movie_text_actions_position {
+  width: 92%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.section_movie_info .movie_text_actions .movie_text_actions_position .article_hero_section {
+  display: flex;
+  justify-content: center;
+  font-size: 22px;
+  font-family: "Marcellus", sans-serif;
+}
+.section_movie_info .movie_text_actions .movie_text_actions_position .year_rating_position {
+  width: 100%;
+  font-size: 20%;
+  display: flex;
+  margin-left: 3%;
+  margin-top: -10%;
+  gap: 2.5%;
+  font-family: "Mulish", sans-serif;
+}
+.section_movie_info .movie_text_actions .movie_text_actions_position .year_rating_position .button_age_hero_section_border {
+  width: 14%;
+  height: 100%;
+  background: var(--secondary-border-color);
+  border-radius: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+}
+.section_movie_info .movie_text_actions .movie_text_actions_position .year_rating_position .button_age_hero_section_border .button_age_hero_section {
+  width: 94%;
+  height: 87.5%;
+  background-color: var(--black-color);
+  border-radius: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section_movie_info .movie_text_actions .movie_text_actions_position .year_rating_position .rating_hero_section {
+  display: flex;
+  margin-left: 12px;
+  font-family: "Mulish", sans-serif;
+}
+.section_movie_info .movie_text_actions .movie_text_actions_position .year_rating_position .rating_hero_section .star_rating_hero_section {
+  width: 7px;
+  height: 7px;
+  margin-left: 2px;
+}
+.section_movie_info .movie_text_actions .movie_text_actions_position .text_main_hero_section {
+  width: 100%;
+  color: var(--gray-main-text-color);
+  font-size: 6px;
+  line-height: 140%;
+  margin-left: 3%;
+  margin-top: -15%;
+  font-family: "Mulish", sans-serif;
+}
+.section_movie_info .movie_text_actions .movie_text_actions_position .watch_info_hero_section {
+  width: 100%;
+  margin-left: 3%;
+  margin-top: -20%;
+  display: flex;
+  gap: 6px;
+}
+.section_movie_info .movie_text_actions .movie_text_actions_position .watch_info_hero_section .button_watch_hero_section {
+  width: 45px;
+  height: 16px;
+  border-radius: 55px;
+  background: var(--primary-border-color);
+  box-shadow: var(--primary-shadow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+.section_movie_info .movie_text_actions .movie_text_actions_position .watch_info_hero_section .button_watch_hero_section .icon_button_watch_hero_section {
+  width: 7px;
+  height: 7px;
+}
+.section_movie_info .movie_text_actions .movie_text_actions_position .watch_info_hero_section .button_watch_hero_section .text_button_watch_hero_section {
+  font-size: 6px;
+  font-family: "Mulish", sans-serif;
+}
+.section_movie_info .movie_text_actions .movie_text_actions_position .watch_info_hero_section .button_info_hero_section {
+  width: 65px;
+  height: 16px;
+  border-radius: 55px;
+  background: var(--white-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 6px;
+  color: var(--black-color);
+  font-family: "Mulish", sans-serif;
+}
+
+.section_list_shows {
+  width: 100%;
+  height: 14vh;
+  background-color: var(--black-color);
+}
+.section_list_shows .article_section_list_shows {
+  width: 100%;
+  height: 25%;
+}
+.section_list_shows .article_section_list_shows .article_section_list_shows_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.section_list_shows .article_section_list_shows .article_section_list_shows_container .rectangle_article_list_shows {
+  width: 11.5px;
+  height: 2.5px;
+  transform: rotate(90deg);
+  border-radius: 55px;
+  background-color: red;
+  background: var(--primary-border-color);
+}
+.section_list_shows .article_section_list_shows .article_section_list_shows_container .title_article_list_shows {
+  color: var(--white-color);
+  font-size: 8px;
+  font-family: "Mulish", sans-serif;
+}
+.section_list_shows .article_section_list_shows .article_section_list_shows_container .arrow_article_list_shows {
+  color: var(--white-color);
+  font-size: 5px;
+  margin-left: 1%;
+}
+.section_list_shows .shows_list {
+  width: 100%;
+  height: 75%;
+  display: flex;
+  justify-content: center;
+}
+.section_list_shows .shows_list .show {
+  width: 15%;
+  height: 90%;
+  border-radius: 5.2px;
+  margin-left: 1.3%;
+}
+.section_list_shows .shows_list .show:hover {
+  box-shadow: var(--list_movies-hover-shadow);
+  cursor: pointer;
+}
+
+.section_list_movies {
+  width: 100%;
+  height: 20vh;
+  background-color: var(--black-color);
+}
+.section_list_movies .article_section_list_movies {
+  width: 100%;
+  height: 25%;
+}
+.section_list_movies .article_section_list_movies .article_section_list_movies_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.section_list_movies .article_section_list_movies .article_section_list_movies_container .rectangle_article_list_movies {
+  width: 11.5px;
+  height: 2.5px;
+  transform: rotate(90deg);
+  border-radius: 55px;
+  background-color: red;
+  background: var(--primary-border-color);
+}
+.section_list_movies .article_section_list_movies .article_section_list_movies_container .title_article_list_movies {
+  color: var(--white-color);
+  font-size: 8px;
+  font-family: "Mulish", sans-serif;
+}
+.section_list_movies .article_section_list_movies .article_section_list_movies_container .arrow_article_list_movies {
+  color: var(--white-color);
+  font-size: 5px;
+  margin-left: 1%;
+}
+.section_list_movies .movies_list {
+  width: 100%;
+  height: 55%;
+  display: flex;
+  justify-content: center;
+}
+.section_list_movies .movies_list .movie {
+  width: 15%;
+  height: 90%;
+  border-radius: 5.2px;
+  margin-left: 1.3%;
+}
+.section_list_movies .movies_list .movie:hover {
+  box-shadow: var(--list_movies-hover-shadow);
+  cursor: pointer;
+}
+.section_list_movies .button_see_movies_section {
+  width: 45px;
+  height: 16px;
+  border-radius: 55px;
+  margin-left: 2%;
+  background: var(--primary-border-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section_list_movies .button_see_movies_section .text_button_see_movies_section {
+  font-size: 6px;
+  color: var(--white-color);
+  font-family: "Mulish", sans-serif;
+}
+.section_list_movies .button_see_movies_section:hover {
+  box-shadow: 0px 4px 50px 0px rgba(50, 108, 255, 0.5019607843);
+}
+
+.section_list_categories {
+  width: 100%;
+  height: 20vh;
+  background-color: var(--black-color);
+}
+.section_list_categories .article_section_list_categories {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  align-items: center;
+}
+.section_list_categories .article_section_list_categories .rectangle_article_list_categories {
+  width: 11.5px;
+  height: 2.5px;
+  transform: rotate(90deg);
+  border-radius: 55px;
+  background-color: red;
+  background: var(--primary-border-color);
+}
+.section_list_categories .article_section_list_categories .title_article_list_categories {
+  color: var(--white-color);
+  font-size: 8px;
+  font-family: "Mulish", sans-serif;
+}
+.section_list_categories .article_section_list_categories .arrow_article_list_gategories {
+  color: var(--white-color);
+  font-size: 5px;
+  margin-left: 1%;
+}
+.section_list_categories .category_list {
+  width: 100%;
+  height: 35%;
+  display: flex;
+  justify-content: center;
+  color: var(--white-color);
+  font-size: 60%;
+}
+.section_list_categories .category_list .block_category {
+  width: 22%;
+  height: 90%;
+  border-radius: 5.2px;
+  margin-left: 1.3%;
+}
+.section_list_categories .category_list .block_category:hover {
+  box-shadow: var(--list_movies-hover-shadow);
+}
+.section_list_categories .category_list .romance {
+  width: 22%;
+  height: 90%;
+  border-radius: 5.2px;
+  background-image: linear-gradient(109.31deg, #fd093f 2.4%, #f383f1 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Mulish", sans-serif;
+}
+.section_list_categories .category_list .romance .icon_romance {
+  width: 30%;
+}
+.section_list_categories .category_list .drama {
+  width: 22%;
+  height: 90%;
+  border-radius: 5.2px;
+  background-image: linear-gradient(114.5deg, #0fffda 2.22%, #3cdb77 68.84%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Mulish", sans-serif;
+}
+.section_list_categories .category_list .drama .icon_drama {
+  width: 30%;
+}
+.section_list_categories .category_list .historical {
+  width: 22%;
+  height: 90%;
+  border-radius: 5.2px;
+  background-image: linear-gradient(109.31deg, #b936ff 2.4%, #57deda 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Mulish", sans-serif;
+}
+.section_list_categories .category_list .historical .icon_historical {
+  width: 30%;
+}
+.section_list_categories .category_list .action {
+  width: 22%;
+  height: 90%;
+  border-radius: 5.2px;
+  background-image: linear-gradient(109.31deg, #fd093f 2.4%, #fb1378 2.41%, #fccb1a 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Mulish", sans-serif;
+}
+.section_list_categories .category_list .action .icon_action {
+  width: 30%;
+}
+.section_list_categories .category_list .Sci-fi {
+  width: 22%;
+  height: 90%;
+  border-radius: 5.2px;
+  background-image: linear-gradient(109.31deg, #ff6472 2.4%, #fda75d 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Mulish", sans-serif;
+}
+.section_list_categories .category_list .Sci-fi .icon_sci_fi {
+  width: 55%;
+}
+.section_list_categories .category_list .Horror {
+  width: 22%;
+  height: 90%;
+  border-radius: 5.2px;
+  background-image: linear-gradient(110.16deg, #13547a 2.37%, #80d0c7 96.77%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Mulish", sans-serif;
+}
+.section_list_categories .category_list .Horror .icon_horror {
+  width: 30%;
+}
+.section_list_categories .category_list .Comedy {
+  width: 22%;
+  height: 90%;
+  border-radius: 5.2px;
+  background-image: linear-gradient(109.93deg, #fff77b 2.37%, #ffbf42 50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Mulish", sans-serif;
+}
+.section_list_categories .category_list .Comedy .icon_comedy {
+  width: 30%;
+}
+.section_list_categories .category_list .Documentary {
+  width: 22%;
+  height: 90%;
+  border-radius: 5.2px;
+  background-image: linear-gradient(109.31deg, #1fa2ff 2.4%, #1fa2ff 2.41%, #1f535c 97.46%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Mulish", sans-serif;
+}
+.section_list_categories .category_list .Documentary .icon_documentary {
+  width: 30%;
+}
+
+.section_list_actors {
+  width: 100%;
+  height: 14vh;
+  background-color: var(--black-color);
+}
+.section_list_actors .article_section_list_actors {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  align-items: center;
+}
+.section_list_actors .article_section_list_actors .rectangle_article_list_actors {
+  width: 11.5px;
+  height: 2.5px;
+  transform: rotate(90deg);
+  border-radius: 55px;
+  background-color: red;
+  background: var(--primary-border-color);
+}
+.section_list_actors .article_section_list_actors .title_article_list_actors {
+  color: var(--white-color);
+  font-size: 8px;
+  font-family: "Mulish", sans-serif;
+}
+.section_list_actors .article_section_list_actors .arrow_article_list_actors {
+  color: var(--white-color);
+  font-size: 5px;
+  margin-left: 1%;
+}
+.section_list_actors .actors_list {
+  width: 100%;
+  height: 55%;
+  display: flex;
+}
+.section_list_actors .actors_list .actor_container {
+  width: 15%;
+  height: 100%;
+  margin-left: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.section_list_actors .actors_list .actor_container .actor {
+  width: 80%;
+  height: 70%;
+  border-radius: 50%;
+}
+.section_list_actors .actors_list .actor_container .actor:hover {
+  box-shadow: var(--list_movies-hover-shadow);
+}
+.section_list_actors .actors_list .actor_container .text_actor_list {
+  width: 94%;
+  font-size: 5px;
+  color: var(--white-color);
+  font-family: "Mulish", sans-serif;
+}
+.section_list_actors .actors_list .actor_container .birch {
+  margin-left: 16%;
+}
+.section_list_actors .actors_list .actor_container .james {
+  margin-left: 2.5%;
+}
+.section_list_actors .actors_list .actor_container .patrick {
+  margin-left: 12%;
+}
+.section_list_actors .actors_list .actor_container .joshua {
+  margin-left: 10%;
+}
+.section_list_actors .actors_list .actor_container .morgan {
+  margin-left: 8.5%;
+}
+
+.section_big_buck_bunny {
+  width: 100%;
+  height: 12vh;
+  display: flex;
+  justify-content: center;
+  background-color: var(--black-color);
+}
+.section_big_buck_bunny .big_buck_bunny_2021_container {
+  background-image: linear-gradient(87.02deg, #0d1a73 29.67%, #000000 70.52%);
+  box-shadow: 0px 0px 30px 0px rgba(255, 255, 255, 0.1019607843);
+  display: flex;
+  width: 80%;
+  height: 80%;
+  border-radius: 5px;
+}
+.section_big_buck_bunny .big_buck_bunny_2021_container .big_buck_bunny {
+  width: 50%;
+  height: 100%;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+.section_big_buck_bunny .big_buck_bunny_2021_container .section_2021_bunny_container {
+  width: 50%;
+  height: 100%;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.section_big_buck_bunny .big_buck_bunny_2021_container .section_2021_bunny_container .section_bunny_2021_year {
+  width: 50%;
+  height: 50%;
+}
+.section_big_buck_bunny .big_buck_bunny_2021_container .section_2021_bunny_container .coming_soon_bunny_section {
+  color: var(--white-color);
+  font-size: 18px;
+  font-family: "Mulish", sans-serif;
+}
+
+.section_register_now {
+  width: 100%;
+  height: 12vh;
+  display: flex;
+  justify-content: center;
+  background-color: var(--black-color);
+}
+.section_register_now .register_now_container {
+  width: 60%;
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/register_now.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 5px;
+}
+.section_register_now .register_now_container .text_register_now_section {
+  width: 70%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.section_register_now .register_now_container .text_register_now_section .h1 {
+  font-size: 12px;
+  color: var(--white-color);
+  font-family: "Mulish", sans-serif;
+}
+.section_register_now .register_now_container .text_register_now_section .h2 {
+  font-size: 12px;
+  color: var(--white-color);
+  font-family: "Mulish", sans-serif;
+}
+.section_register_now .register_now_container .button_register_now {
+  border-radius: 55px;
+  width: 45px;
+  height: 15px;
+  font-size: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white-color);
+  background: var(--primary-border-color);
+  font-family: "Mulish", sans-serif;
+}
+.section_register_now .register_now_container .button_register_now:hover {
+  box-shadow: var(--primary-shadow);
+}
+
+.footer {
+  width: 100%;
+  height: 12vh;
+  display: flex;
+  justify-content: center;
+  background-color: var(--black-color);
+}
+.footer .footer_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.footer .footer_container .logo_text_footer {
+  width: 27%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: -10%;
+  margin-left: 2%;
+  gap: 10px;
+  margin-top: -7%;
+}
+.footer .footer_container .logo_text_footer .logo_footer {
+  width: 40%;
+  height: 41%;
+  background-image: var(--primary-border-color);
+  font-size: 20px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "LemonRegular", sans-serif;
+}
+.footer .footer_container .logo_text_footer .logo_footer .logo_inner_footer {
+  width: 92%;
+  height: 90%;
+  background-color: var(--black-color);
+  border-radius: 5px;
+  color: var(--white-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer .footer_container .logo_text_footer .text_box_footer {
+  color: var(--white-color);
+  font-size: 22px;
+  font-family: "Poppins", sans-serif;
+}
+.footer .footer_container .links_footer_container {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.footer .footer_container .links_footer_container .links_footer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.footer .footer_container .links_footer_container .links_footer .link_footer {
+  text-decoration: none;
+  color: var(--gray-main-text-color);
+  font-size: 7px;
+  margin-bottom: 10px;
+  font-family: "Mulish", sans-serif;
+}
+
+@media (max-width: 449.8px) {
+  .logo {
+    height: 60%;
+  }
+}
+@media (max-width: 499.8px) and (min-width: 450px) {
+  .header .container_header .logo_box .left_header_text {
+    font-size: 20px;
+  }
+  .header .container_header .logo_box .logo {
+    width: 40%;
+    height: 60%;
+  }
+  .header .container_header .logo_box .logo .logo-inner-text {
+    font-size: 20px;
+  }
+  .header .right_icons_header .search_header {
+    width: 20px;
+    height: 20px;
+  }
+  .header .right_icons_header .bell_header {
+    width: 20px;
+    height: 20px;
+  }
+  .header .right_icons_header .profile_header {
+    width: 20px;
+    height: 20px;
+  }
+  .section_movie_info .movie_text_actions .movie_text_actions_position .article_hero_section {
+    margin-left: -22%;
+  }
+  .section_movie_info .movie_text_actions .movie_text_actions_position .year_rating_position .button_age_hero_section_border {
+    width: 11%;
+  }
+  .section_movie_info .movie_text_actions .movie_text_actions_position .year_rating_position .button_age_hero_section_border .button_age_hero_section {
+    width: 95%;
+  }
+  .section_movie_info .movie_text_actions .movie_text_actions_position .text_main_hero_section {
+    font-size: 40%;
+  }
+  .section_list_shows .shows_list .show {
+    height: 100%;
+    border-radius: 8.3%;
+  }
+  .section_list_movies .movies_list .movie {
+    height: 100%;
+    border-radius: 8.3%;
+  }
+  .section_list_movies .button_see_movies_section {
+    margin-top: 2%;
+  }
+  .section_list_actors .actors_list .actor_container .actor {
+    height: 95%;
+  }
+  .section_list_actors .actors_list .actor_container .text_actor_list {
+    font-size: 7px;
+  }
+  .footer .footer_container .logo_text_footer {
+    margin-top: -3%;
+  }
+  .footer .footer_container .logo_text_footer .logo_footer {
+    height: 55%;
+  }
+  .footer .footer_container .links_footer_container .links_footer {
+    margin-top: 4%;
+    font-size: 12px;
+  }
+}
+@media (max-width: 629.8px) and (min-width: 500px) {
+  .header {
+    height: 8vh;
+  }
+  .header .container_header .logo_box .left_header_text {
+    font-size: 24px;
+  }
+  .header .container_header .logo_box .logo {
+    width: 40%;
+    height: 70%;
+  }
+  .header .container_header .logo_box .logo .logo-inner-text {
+    font-size: 18px;
+  }
+  .header .container_header .menu_header_box .menu_button_header {
+    font-size: 12px;
+  }
+  .header .container_header .right_icons_header .search_header {
+    width: 12px;
+    height: 12px;
+  }
+  .header .container_header .right_icons_header .bell_header {
+    width: 12px;
+    height: 12px;
+  }
+  .header .container_header .right_icons_header .profile_header {
+    width: 12px;
+    height: 12px;
+  }
+  .section_movie_info {
+    height: 28vh;
+  }
+  .section_movie_info .movie_text_actions .movie_text_actions_position {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 55px;
+    margin-bottom: 20%;
+  }
+  .section_movie_info .movie_text_actions .movie_text_actions_position .article_hero_section {
+    margin-left: -28%;
+    font-size: 25px;
+    margin-top: 10%;
+  }
+  .section_movie_info .movie_text_actions .movie_text_actions_position .year_rating_position {
+    font-size: 8px;
+  }
+  .section_movie_info .movie_text_actions .movie_text_actions_position .year_rating_position .button_age_hero_section_border {
+    width: 10%;
+  }
+  .section_movie_info .movie_text_actions .movie_text_actions_position .year_rating_position .button_age_hero_section_border .button_age_hero_section {
+    width: 95%;
+  }
+  .section_movie_info .movie_text_actions .movie_text_actions_position .year_rating_position .rating_hero_section .star_rating_hero_section {
+    width: 9px;
+    height: 9px;
+  }
+  .section_movie_info .movie_text_actions .movie_text_actions_position .text_main_hero_section {
+    font-size: 46%;
+  }
+  .section_list_shows {
+    height: 18vh;
+  }
+  .section_list_shows .article_section_list_shows {
+    width: 98%;
+    margin-left: 2%;
+  }
+  .section_list_shows .shows_list .show {
+    height: 100%;
+    border-radius: 8.3%;
+  }
+  .section_list_movies {
+    height: 24vh;
+  }
+  .section_list_movies .article_section_list_movies {
+    width: 98%;
+    margin-left: 2%;
+  }
+  .section_list_movies .movies_list .movie {
+    height: 100%;
+    border-radius: 8.3%;
+  }
+  .section_list_movies .button_see_movies_section {
+    width: 10%;
+    height: 12%;
+    margin-top: 2%;
+  }
+  .section_list_movies .button_see_movies_section .text_button_see_movies_section {
+    font-size: 50%;
+  }
+  .section_list_categories {
+    height: 21vh;
+  }
+  .section_list_categories .article_section_list_categories {
+    width: 96%;
+    margin-left: 4%;
+  }
+  .section_list_actors {
+    height: 17vh;
+  }
+  .section_list_actors .article_section_list_actors {
+    width: 98.5%;
+    margin-left: 1.5%;
+  }
+  .section_list_actors .actors_list {
+    width: 99%;
+  }
+  .section_list_actors .actors_list .actor_container .actor {
+    height: 97%;
+  }
+  .section_list_actors .actors_list .actor_container .text_actor_list {
+    font-size: 9px;
+  }
+  .section_register_now {
+    height: 14vh;
+  }
+  .footer {
+    height: 13vh;
+  }
+  .footer .footer_container .logo_text_footer {
+    margin-top: -3%;
+  }
+  .footer .footer_container .logo_text_footer .logo_footer {
+    width: 35%;
+    height: 55%;
+    margin-left: 12%;
+  }
+  .footer .footer_container .links_footer_container .links_footer {
+    height: 82%;
+    margin-top: 4%;
+    font-size: 12px;
+  }
+}
+@media (max-width: 767.8px) and (min-width: 630px) {
+  .header {
+    height: 10vh;
+  }
+  .header .container_header .logo_box .left_header_text {
+    font-size: 24px;
+  }
+  .header .container_header .logo_box .logo {
+    width: 40%;
+    height: 70%;
+  }
+  .header .container_header .logo_box .logo .logo-inner-text {
+    font-size: 18px;
+  }
+  .header .container_header .menu_header_box .menu_button_header {
+    font-size: 12px;
+  }
+  .header .container_header .right_icons_header .search_header {
+    width: 12px;
+    height: 12px;
+  }
+  .header .container_header .right_icons_header .bell_header {
+    width: 12px;
+    height: 12px;
+  }
+  .header .container_header .right_icons_header .profile_header {
+    width: 12px;
+    height: 12px;
+  }
+  .section_movie_info {
+    height: 38vh;
+  }
+  .section_movie_info .movie_text_actions .movie_text_actions_position {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 70px;
+    margin-bottom: 20%;
+  }
+  .section_movie_info .movie_text_actions .movie_text_actions_position .article_hero_section {
+    margin-left: -26%;
+    font-size: 2em;
+    margin-top: 10%;
+  }
+  .section_movie_info .movie_text_actions .movie_text_actions_position .year_rating_position {
+    font-size: 10px;
+  }
+  .section_movie_info .movie_text_actions .movie_text_actions_position .year_rating_position .button_age_hero_section_border {
+    width: 11%;
+  }
+  .section_movie_info .movie_text_actions .movie_text_actions_position .year_rating_position .button_age_hero_section_border .button_age_hero_section {
+    width: 95%;
+  }
+  .section_movie_info .movie_text_actions .movie_text_actions_position .year_rating_position .rating_hero_section .star_rating_hero_section {
+    width: 11px;
+    height: 11px;
+  }
+  .section_movie_info .movie_text_actions .movie_text_actions_position .text_main_hero_section {
+    font-size: 48%;
+  }
+  .section_movie_info .movie_text_actions .movie_text_actions_position .watch_info_hero_section {
+    height: 60%;
+  }
+  .section_movie_info .movie_text_actions .movie_text_actions_position .watch_info_hero_section .button_watch_hero_section {
+    width: 25%;
+    height: 40%;
+  }
+  .section_movie_info .movie_text_actions .movie_text_actions_position .watch_info_hero_section .button_watch_hero_section .icon_button_watch_hero_section {
+    width: 10px;
+    height: 10px;
+  }
+  .section_movie_info .movie_text_actions .movie_text_actions_position .watch_info_hero_section .button_watch_hero_section .text_button_watch_hero_section {
+    font-size: 10px;
+  }
+  .section_movie_info .movie_text_actions .movie_text_actions_position .watch_info_hero_section .button_info_hero_section {
+    width: 30%;
+    height: 40%;
+    font-size: 8.5px;
+  }
+  .section_list_shows {
+    height: 24vh;
+  }
+  .section_list_shows .article_section_list_shows {
+    width: 98%;
+    margin-left: 2%;
+  }
+  .section_list_shows .article_section_list_shows .article_section_list_shows_container .rectangle_article_list_shows {
+    width: 2.2%;
+    height: 8%;
+  }
+  .section_list_shows .article_section_list_shows .article_section_list_shows_container .title_article_list_shows {
+    font-size: 10px;
+  }
+  .section_list_shows .article_section_list_shows .article_section_list_shows_container .arrow_article_list_shows {
+    font-size: 9px;
+  }
+  .section_list_shows .shows_list .show {
+    height: 100%;
+    border-radius: 8.7%;
+  }
+  .section_list_movies {
+    height: 34vh;
+  }
+  .section_list_movies .article_section_list_movies {
+    width: 98%;
+    margin-left: 2%;
+  }
+  .section_list_movies .article_section_list_movies .article_section_list_movies_container .rectangle_article_list_movies {
+    width: 2.2%;
+    height: 5.7%;
+  }
+  .section_list_movies .article_section_list_movies .article_section_list_movies_container .title_article_list_movies {
+    font-size: 10px;
+  }
+  .section_list_movies .article_section_list_movies .article_section_list_movies_container .arrow_article_list_smovies {
+    font-size: 9px;
+  }
+  .section_list_movies .movies_list .movie {
+    height: 100%;
+    border-radius: 8.3%;
+  }
+  .section_list_movies .button_see_movies_section {
+    width: 10%;
+    height: 10%;
+    margin-top: 2%;
+  }
+  .section_list_movies .button_see_movies_section .text_button_see_movies_section {
+    font-size: 55%;
+  }
+  .section_list_categories {
+    height: 26vh;
+  }
+  .section_list_categories .article_section_list_categories {
+    width: 96%;
+    margin-left: 4%;
+  }
+  .section_list_categories .article_section_list_categories .rectangle_article_list_categories {
+    width: 2.2%;
+    height: 8%;
+  }
+  .section_list_categories .article_section_list_categories .title_article_list_categories {
+    font-size: 10px;
+  }
+  .section_list_categories .article_section_list_categories .arrow_article_list_categories {
+    font-size: 9px;
+  }
+  .section_list_categories .category_list .block_category {
+    font-size: 12px;
+  }
+  .section_list_actors {
+    height: 20vh;
+  }
+  .section_list_actors .article_section_list_actors {
+    width: 98.5%;
+    margin-left: 1.5%;
+  }
+  .section_list_actors .article_section_list_actors .rectangle_article_list_actors {
+    width: 2.2%;
+    height: 8%;
+  }
+  .section_list_actors .article_section_list_actors .title_article_list_actors {
+    font-size: 10px;
+  }
+  .section_list_actors .article_section_list_actors .arrow_article_list_actors {
+    font-size: 9px;
+  }
+  .section_list_actors .actors_list {
+    width: 99%;
+  }
+  .section_list_actors .actors_list .actor_container .actor {
+    height: 97%;
+  }
+  .section_list_actors .actors_list .actor_container .text_actor_list {
+    font-size: 10px;
+  }
+  .section_big_buck_bunny {
+    height: 18vh;
+  }
+  .section_register_now {
+    height: 18vh;
+  }
+  .footer {
+    height: 16vh;
+  }
+  .footer .footer_container .logo_text_footer {
+    margin-top: -3%;
+  }
+  .footer .footer_container .logo_text_footer .logo_footer {
+    width: 35%;
+    height: 55%;
+    margin-left: 12%;
+  }
+  .footer .footer_container .links_footer_container .links_footer {
+    height: 82%;
+    margin-top: 4%;
+    font-size: 12px;
+  }
+}
+@media (max-width: 1023.8px) and (min-width: 768px) {
+  .header {
+    height: 13vh;
+  }
+  .header .container_header .logo_box .left_header_text {
+    font-size: 24px;
+  }
+  .header .container_header .logo_box .logo {
+    width: 40%;
+    height: 70%;
+  }
+  .header .container_header .logo_box .logo .logo-inner-text {
+    font-size: 35px;
+  }
+  .header .container_header .menu_header_box .menu_button_header {
+    font-size: 14px;
+  }
+  .header .container_header .right_icons_header .search_header {
+    width: 16px;
+    height: 16px;
+  }
+  .header .container_header .right_icons_header .bell_header {
+    width: 16px;
+    height: 16px;
+  }
+  .header .container_header .right_icons_header .profile_header {
+    width: 16px;
+    height: 16px;
+  }
+  .section_movie_info {
+    height: 55vh;
+  }
+  .section_movie_info .movie_text_actions .movie_text_actions_position {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 22%;
+    margin-bottom: 20%;
+  }
+  .section_movie_info .movie_text_actions .movie_text_actions_position .article_hero_section {
+    margin-left: -30%;
+    font-size: 2.5em;
+    margin-top: 10%;
+  }
+  .section_movie_info .movie_text_actions .movie_text_actions_position .year_rating_position {
+    font-size: 13px;
+  }
+  .section_movie_info .movie_text_actions .movie_text_actions_position .year_rating_position .button_age_hero_section_border {
+    width: 11%;
+  }
+  .section_movie_info .movie_text_actions .movie_text_actions_position .year_rating_position .button_age_hero_section_border .button_age_hero_section {
+    width: 95%;
+  }
+  .section_movie_info .movie_text_actions .movie_text_actions_position .year_rating_position .rating_hero_section .star_rating_hero_section {
+    width: 11px;
+    height: 11px;
+  }
+  .section_movie_info .movie_text_actions .movie_text_actions_position .text_main_hero_section {
+    font-size: 70%;
+  }
+  .section_movie_info .movie_text_actions .movie_text_actions_position .watch_info_hero_section {
+    height: 60%;
+  }
+  .section_movie_info .movie_text_actions .movie_text_actions_position .watch_info_hero_section .button_watch_hero_section {
+    width: 20%;
+    height: 25%;
+  }
+  .section_movie_info .movie_text_actions .movie_text_actions_position .watch_info_hero_section .button_watch_hero_section .icon_button_watch_hero_section {
+    width: 10px;
+    height: 10px;
+  }
+  .section_movie_info .movie_text_actions .movie_text_actions_position .watch_info_hero_section .button_watch_hero_section .text_button_watch_hero_section {
+    font-size: 10px;
+  }
+  .section_movie_info .movie_text_actions .movie_text_actions_position .watch_info_hero_section .button_info_hero_section {
+    width: 25%;
+    height: 25%;
+    font-size: 8.5px;
+  }
+  .section_list_shows {
+    height: 32vh;
+  }
+  .section_list_shows .article_section_list_shows {
+    width: 98%;
+    margin-left: 2%;
+  }
+  .section_list_shows .article_section_list_shows .article_section_list_shows_container .rectangle_article_list_shows {
+    width: 2.2%;
+    height: 8%;
+  }
+  .section_list_shows .article_section_list_shows .article_section_list_shows_container .title_article_list_shows {
+    font-size: 12px;
+  }
+  .section_list_shows .article_section_list_shows .article_section_list_shows_container .arrow_article_list_shows {
+    font-size: 10px;
+  }
+  .section_list_shows .shows_list .show {
+    height: 100%;
+    border-radius: 8.7%;
+  }
+  .section_list_movies {
+    height: 44vh;
+  }
+  .section_list_movies .article_section_list_movies {
+    width: 98%;
+    margin-left: 2%;
+  }
+  .section_list_movies .article_section_list_movies .article_section_list_movies_container .rectangle_article_list_movies {
+    width: 2.2%;
+    height: 6%;
+  }
+  .section_list_movies .article_section_list_movies .article_section_list_movies_container .title_article_list_movies {
+    font-size: 12px;
+  }
+  .section_list_movies .article_section_list_movies .article_section_list_movies_container .arrow_article_list_smovies {
+    font-size: 10px;
+  }
+  .section_list_movies .movies_list .movie {
+    height: 100%;
+    border-radius: 8.3%;
+  }
+  .section_list_movies .button_see_movies_section {
+    width: 9%;
+    height: 10%;
+    margin-top: 2%;
+  }
+  .section_list_movies .button_see_movies_section .text_button_see_movies_section {
+    font-size: 62%;
+  }
+  .section_list_categories {
+    height: 45vh;
+  }
+  .section_list_categories .article_section_list_categories {
+    width: 96%;
+    margin-left: 4%;
+  }
+  .section_list_categories .article_section_list_categories .rectangle_article_list_categories {
+    width: 2.2%;
+    height: 6%;
+  }
+  .section_list_categories .article_section_list_categories .title_article_list_categories {
+    font-size: 12px;
+  }
+  .section_list_categories .article_section_list_categories .arrow_article_list_categories {
+    font-size: 10px;
+  }
+  .section_list_categories .category_list .block_category {
+    font-size: 14px;
+  }
+  .section_list_actors {
+    height: 28vh;
+  }
+  .section_list_actors .article_section_list_actors {
+    width: 98.5%;
+    margin-left: 1.5%;
+  }
+  .section_list_actors .article_section_list_actors .rectangle_article_list_actors {
+    width: 2.2%;
+    height: 8%;
+  }
+  .section_list_actors .article_section_list_actors .title_article_list_actors {
+    font-size: 12px;
+  }
+  .section_list_actors .article_section_list_actors .arrow_article_list_actors {
+    font-size: 10px;
+  }
+  .section_list_actors .actors_list {
+    width: 99%;
+  }
+  .section_list_actors .actors_list .actor_container .actor {
+    height: 97%;
+  }
+  .section_list_actors .actors_list .actor_container .text_actor_list {
+    font-size: 14px;
+  }
+  .section_big_buck_bunny {
+    height: 26vh;
+  }
+  .section_register_now {
+    height: 24vh;
+  }
+  .section_register_now .register_now_container .text_register_now_section .h1 {
+    font-size: 26px;
+  }
+  .section_register_now .register_now_container .text_register_now_section .h2 {
+    font-size: 26px;
+  }
+  .section_register_now .register_now_container .button_register_now {
+    width: 14%;
+    height: 24%;
+    font-size: 10px;
+  }
+  .footer {
+    height: 22vh;
+  }
+  .footer .footer_container .logo_text_footer {
+    margin-top: -3%;
+  }
+  .footer .footer_container .logo_text_footer .text_box_footer {
+    font-size: 35px;
+    font-weight: bold;
+  }
+  .footer .footer_container .logo_text_footer .logo_footer {
+    width: 35%;
+    height: 55%;
+    margin-left: 12%;
+  }
+  .footer .footer_container .logo_text_footer .logo_footer .logo_inner_footer .text_logo_footer {
+    font-size: 45px;
+  }
+  .footer .footer_container .links_footer_container .links_footer {
+    height: 82%;
+    margin-top: 4%;
+  }
+  .footer .footer_container .links_footer_container .links_footer .link_footer {
+    font-size: 12px;
+  }
+}
+@media (min-width: 1024px) {
+  .header {
+    height: 16vh;
+  }
+  .header .container_header .logo_box .left_header_text {
+    font-size: 35px;
+    margin-left: -10%;
+  }
+  .header .container_header .logo_box .logo {
+    width: 36%;
+    height: 70%;
+  }
+  .header .container_header .logo_box .logo .logo-inner-text {
+    font-size: 50px;
+  }
+  .header .container_header .menu_header_box .menu_button_header {
+    font-size: 16px;
+  }
+  .header .container_header .right_icons_header .search_header {
+    width: 20px;
+    height: 20px;
+  }
+  .header .container_header .right_icons_header .bell_header {
+    width: 20px;
+    height: 20px;
+  }
+  .header .container_header .right_icons_header .profile_header {
+    width: 20px;
+    height: 20px;
+  }
+  .section_movie_info {
+    height: 85vh;
+  }
+  .section_movie_info .movie_text_actions .movie_text_actions_position {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 22%;
+    margin-bottom: 20%;
+  }
+  .section_movie_info .movie_text_actions .movie_text_actions_position .article_hero_section {
+    margin-left: -48%;
+    font-size: 3em;
+    margin-top: 15%;
+  }
+  .section_movie_info .movie_text_actions .movie_text_actions_position .year_rating_position {
+    font-size: 18px;
+  }
+  .section_movie_info .movie_text_actions .movie_text_actions_position .year_rating_position .button_age_hero_section_border {
+    width: 10%;
+  }
+  .section_movie_info .movie_text_actions .movie_text_actions_position .year_rating_position .button_age_hero_section_border .button_age_hero_section {
+    width: 95%;
+  }
+  .section_movie_info .movie_text_actions .movie_text_actions_position .year_rating_position .rating_hero_section .star_rating_hero_section {
+    width: 21px;
+    height: 21px;
+    margin-left: 10%;
+  }
+  .section_movie_info .movie_text_actions .movie_text_actions_position .text_main_hero_section {
+    font-size: 100%;
+  }
+  .section_movie_info .movie_text_actions .movie_text_actions_position .watch_info_hero_section {
+    height: 25%;
+  }
+  .section_movie_info .movie_text_actions .movie_text_actions_position .watch_info_hero_section .button_watch_hero_section {
+    width: 20%;
+    height: 25%;
+  }
+  .section_movie_info .movie_text_actions .movie_text_actions_position .watch_info_hero_section .button_watch_hero_section .icon_button_watch_hero_section {
+    width: 18px;
+    height: 18px;
+  }
+  .section_movie_info .movie_text_actions .movie_text_actions_position .watch_info_hero_section .button_watch_hero_section .text_button_watch_hero_section {
+    font-size: 15px;
+  }
+  .section_movie_info .movie_text_actions .movie_text_actions_position .watch_info_hero_section .button_info_hero_section {
+    width: 25%;
+    height: 25%;
+    font-size: 13px;
+  }
+  .section_list_shows {
+    height: 54vh;
+  }
+  .section_list_shows .article_section_list_shows {
+    width: 98%;
+    margin-left: 2%;
+  }
+  .section_list_shows .article_section_list_shows .article_section_list_shows_container .rectangle_article_list_shows {
+    width: 2.2%;
+    height: 8%;
+  }
+  .section_list_shows .article_section_list_shows .article_section_list_shows_container .title_article_list_shows {
+    font-size: 14px;
+  }
+  .section_list_shows .article_section_list_shows .article_section_list_shows_container .arrow_article_list_shows {
+    font-size: 12px;
+  }
+  .section_list_shows .shows_list .show {
+    height: 100%;
+    border-radius: 10.5%;
+  }
+  .section_list_movies {
+    height: 70vh;
+  }
+  .section_list_movies .article_section_list_movies {
+    width: 98%;
+    margin-left: 2%;
+  }
+  .section_list_movies .article_section_list_movies .article_section_list_movies_container .rectangle_article_list_movies {
+    width: 2.2%;
+    height: 6%;
+  }
+  .section_list_movies .article_section_list_movies .article_section_list_movies_container .title_article_list_movies {
+    font-size: 14px;
+  }
+  .section_list_movies .article_section_list_movies .article_section_list_movies_container .arrow_article_list_movies {
+    font-size: 12px;
+  }
+  .section_list_movies .movies_list .movie {
+    height: 100%;
+    border-radius: 8.3%;
+  }
+  .section_list_movies .button_see_movies_section {
+    width: 10%;
+    height: 9%;
+    margin-top: 2%;
+  }
+  .section_list_movies .button_see_movies_section .text_button_see_movies_section {
+    font-size: 80%;
+  }
+  .section_list_categories {
+    height: 55vh;
+  }
+  .section_list_categories .article_section_list_categories {
+    width: 96%;
+    margin-left: 4%;
+  }
+  .section_list_categories .article_section_list_categories .rectangle_article_list_categories {
+    width: 2.2%;
+    height: 6%;
+  }
+  .section_list_categories .article_section_list_categories .title_article_list_categories {
+    font-size: 14px;
+  }
+  .section_list_categories .article_section_list_categories .arrow_article_list_gategories {
+    font-size: 12px;
+  }
+  .section_list_categories .category_list .block_category {
+    border-radius: 15px;
+    font-size: 16px;
+  }
+  .section_list_actors {
+    height: 38vh;
+  }
+  .section_list_actors .article_section_list_actors {
+    width: 98.5%;
+    margin-left: 1.5%;
+  }
+  .section_list_actors .article_section_list_actors .rectangle_article_list_actors {
+    width: 2.2%;
+    height: 8%;
+  }
+  .section_list_actors .article_section_list_actors .title_article_list_actors {
+    font-size: 14px;
+  }
+  .section_list_actors .article_section_list_actors .arrow_article_list_actors {
+    font-size: 12px;
+  }
+  .section_list_actors .actors_list {
+    width: 99%;
+  }
+  .section_list_actors .actors_list .actor_container .actor {
+    height: 100%;
+  }
+  .section_list_actors .actors_list .actor_container .text_actor_list {
+    font-size: 16px;
+  }
+  .section_list_actors .actors_list .actor_container .samantha {
+    margin-left: 12%;
+  }
+  .section_list_actors .actors_list .actor_container .birch {
+    margin-left: 24%;
+  }
+  .section_list_actors .actors_list .actor_container .james {
+    margin-left: 15%;
+  }
+  .section_list_actors .actors_list .actor_container .patrick {
+    margin-left: 20%;
+  }
+  .section_list_actors .actors_list .actor_container .joshua {
+    margin-left: 20%;
+  }
+  .section_list_actors .actors_list .actor_container .morgan {
+    margin-left: 20%;
+  }
+  .section_big_buck_bunny {
+    height: 40vh;
+  }
+  .section_big_buck_bunny .big_buck_bunny_2021_container {
+    border-radius: 50%;
+  }
+  .section_register_now {
+    height: 30vh;
+  }
+  .section_register_now .register_now_container .text_register_now_section .h1 {
+    font-size: 32px;
+  }
+  .section_register_now .register_now_container .text_register_now_section .h2 {
+    font-size: 32px;
+  }
+  .section_register_now .register_now_container .button_register_now {
+    width: 14%;
+    height: 24%;
+    font-size: 10px;
+  }
+  .footer {
+    height: 32vh;
+  }
+  .footer .footer_container .logo_text_footer {
+    margin-top: -3%;
+  }
+  .footer .footer_container .logo_text_footer .text_box_footer {
+    font-size: 50px;
+    font-weight: bold;
+  }
+  .footer .footer_container .logo_text_footer .logo_footer {
+    width: 35%;
+    height: 55%;
+    margin-left: 12%;
+  }
+  .footer .footer_container .logo_text_footer .logo_footer .logo_inner_footer .text_logo_footer {
+    font-size: 80px;
+  }
+  .footer .footer_container .links_footer_container .links_footer {
+    height: 6%;
+    margin-top: 6%;
+  }
+  .footer .footer_container .links_footer_container .links_footer .link_footer {
+    font-size: 18px;
+  }
+}

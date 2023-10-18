@@ -1,0 +1,11 @@
+{
+  "scss": {
+    "snippets": {
+      "lgd": "@include lg-d {\n\t${1}\n}",
+      "mdd": "@include md-d {\n\t${1}\n}",
+      "smd": "@include sm-d {\n\t${1}\n}",
+      "sml": "@include sm-l {\n\t${1}\n}",
+      "smll": "@include sm-ll {\n\t${1}\n}"
+    }
+  }
+}
